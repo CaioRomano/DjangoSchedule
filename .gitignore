@@ -3,3 +3,4 @@
 /DjangoSchedule/DjangoSchedule/migrations/
 /.idea
 *.sqlite3
+*/__pycache__
