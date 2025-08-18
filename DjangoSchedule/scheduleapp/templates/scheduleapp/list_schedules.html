@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Schedules List{% endblock %}
+
+{% block content %}
+<h1>Schedules</h1>
+    {% if user.is_authenticated %}
+    {% if schedules %}
+    <p><a href="{% url 'scheduleapp:create' %}">New Schedule</a></p>
+    {% endif %}
+    {% else %}
+    <p>Login for Create Your First Schedule</p>
+    {% endif %}
+    {% for schedule in schedules %}
+
+        <hr>
+        <div>
+            <h2>
+                <a href="{% url 'scheduleapp:edit' schedule.pk %}">{{ schedule.title }}</a>
+                <form method="post" action="{% url 'scheduleapp:delete' schedule.pk %}" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" onclick="return confirm('Tem certeza de que deseja excluir esta anotação?');">
+                        Remover
+                    </button>
+                </form>
+            </h2>
+            <small>Created at: {{ schedule.created_at|date:"d M Y, H:i" }} | Modified at: {{ schedule.modified_at|date:"d M Y, H:i" }}</small>
+            <div>
+                {{ schedule.body|safe }}
+            </div>
+        </div>
+
+    {% empty %}
+        {% if user.is_authenticated %}
+            <p>No schedules yet. <a href="{% url 'scheduleapp:create' %}">Create your first Schedule!</a></p>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

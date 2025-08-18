@@ -1,0 +1,5 @@
+/DjangoSchedule/scheduleapp/migrations/
+/DjangoSchedule/users/migrations/
+/DjangoSchedule/DjangoSchedule/migrations/
+/.idea
+*.sqlite3

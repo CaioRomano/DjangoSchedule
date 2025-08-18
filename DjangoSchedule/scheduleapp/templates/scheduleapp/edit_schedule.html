@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit {{ schedule.title }}{% endblock %}
+
+{% block content %}
+    <h1>Edit Schedule</h1>
+    <a href="{% url 'scheduleapp:list' %}">Back to List</a>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.media }}
+        {{ form.as_p }}
+        <button type="submit">Update</button>
+    </form>
+
+    <hr>
+{% endblock %}

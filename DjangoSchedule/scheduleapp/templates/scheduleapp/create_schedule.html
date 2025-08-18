@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Schedule{% endblock %}
+    <title>Create Schedule</title>
+
+{% block content %}
+    <h1>Create Schedule</h1>
+    <a href="{% url 'scheduleapp:list' %}">Back to List</a>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.media }} {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+{% endblock %}
