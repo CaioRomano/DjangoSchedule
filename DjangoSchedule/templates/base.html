@@ -16,18 +16,18 @@
         <span>
             Home
         </span>
-    </a> |
+    </a>
     <a href="{% url 'scheduleapp:list' %}">
         <span>
-            List Schedules
+            Your Schedules
         </span>
-    </a> |
+    </a>
     {% if user.is_authenticated %}
     <a href="{% url 'scheduleapp:create' %}">
             <span role="img" aria-label="New Post" title="New Schedule">
             New Schedule
             </span>
-    </a> |
+    </a>
     <form class="form-logout" method="post" action="{% url 'users:logout' %}">
         {% csrf_token %}
         <button class="logout-button" aria-label="User Logout" title="User Logout">Logout</button>
@@ -37,12 +37,12 @@
         <span role="img" aria-label="User Registration" title="User Registration">
         Register
         </span>
-    </a> |
+    </a>
     <a href="{% url 'users:login' %}">
         <span role="img" aria-label="User Login" title="User Login">
             Login
         </span>
-    </a> |
+    </a>
     {% endif %}
 </nav>
 

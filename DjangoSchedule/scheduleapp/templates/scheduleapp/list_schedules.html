@@ -3,13 +3,12 @@
 {% block title %}Schedules List{% endblock %}
 
 {% block content %}
-<h1>Schedules</h1>
     {% if user.is_authenticated %}
     {% if schedules %}
     <p><a href="{% url 'scheduleapp:create' %}">New Schedule</a></p>
     {% endif %}
     {% else %}
-    <p>Login for Create Your First Schedule</p>
+    <h3>Login for Create Your First Schedule</h3>
     {% endif %}
     {% for schedule in schedules %}
 
