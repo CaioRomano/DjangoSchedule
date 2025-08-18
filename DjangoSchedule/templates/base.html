@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        My Schedules
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<nav>
+    <a href="/">
+        <span>
+            Home
+        </span>
+    </a> |
+    <a href="{% url 'scheduleapp:list' %}">
+        <span>
+            List Schedules
+        </span>
+    </a> |
+    {% if user.is_authenticated %}
+    <a href="{% url 'scheduleapp:create' %}">
+            <span role="img" aria-label="New Post" title="New Schedule">
+            New Schedule
+            </span>
+    </a> |
+    <form class="form-logout" method="post" action="{% url 'users:logout' %}">
+        {% csrf_token %}
+        <button class="logout-button" aria-label="User Logout" title="User Logout">Logout</button>
+    </form>
+    {% else %}
+    <a href="{% url 'users:register' %}">
+        <span role="img" aria-label="User Registration" title="User Registration">
+        Register
+        </span>
+    </a> |
+    <a href="{% url 'users:login' %}">
+        <span role="img" aria-label="User Login" title="User Login">
+            Login
+        </span>
+    </a> |
+    {% endif %}
+</nav>
+
+<main>
+    {% if not user.is_authenticated %}
+    <h2>Need login for create your schedule!</h2>
+    {% endif %}
+{% block content %}
+{% endblock %}
+</main>
+
+</body>
+</html>

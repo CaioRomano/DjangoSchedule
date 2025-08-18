@@ -1,0 +1,58 @@
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1, h2 {
+    color: #0056b3;
+}
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #c82333;
+}
+form {
+    display: inline-block;
+}
+
+/* Estilo para a barra de navegação */
+nav {
+    background-color: #B2EBF2; /* Azulado claro */
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav a {
+    color: #003366; /* Azul escuro para contraste */
+    font-weight: bold;
+    margin-left: 20px;
+}
+nav a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
