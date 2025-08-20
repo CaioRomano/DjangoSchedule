@@ -5,7 +5,7 @@
 {% block content %}
     {% if user.is_authenticated %}
     {% if schedules %}
-    <p><a href="{% url 'scheduleapp:create' %}">New Schedule</a></p>
+    <h4 id="newschedule"><a href="{% url 'scheduleapp:create' %}">New Schedule</a></h4>
     {% endif %}
     {% else %}
     <h3>Login for Create Your First Schedule</h3>
@@ -16,17 +16,17 @@
         <div>
             <h2>
                 <a href="{% url 'scheduleapp:edit' schedule.pk %}">{{ schedule.title }}</a>
-                <form method="post" action="{% url 'scheduleapp:delete' schedule.pk %}" style="display:inline;">
-                    {% csrf_token %}
-                    <button type="submit" onclick="return confirm('Tem certeza de que deseja excluir esta anotação?');">
-                        Remover
-                    </button>
-                </form>
             </h2>
             <small>Created at: {{ schedule.created_at|date:"d M Y, H:i" }} | Modified at: {{ schedule.modified_at|date:"d M Y, H:i" }}</small>
             <div>
                 {{ schedule.body|safe }}
             </div>
+            <form method="post" action="{% url 'scheduleapp:delete' schedule.pk %}" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" id="removeButton" onclick="return confirm('Tem certeza de que deseja excluir esta anotação?');">
+                        Remover
+                    </button>
+                </form>
         </div>
 
     {% empty %}

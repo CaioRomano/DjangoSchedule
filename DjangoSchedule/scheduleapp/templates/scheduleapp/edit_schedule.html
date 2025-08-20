@@ -4,13 +4,13 @@
 
 {% block content %}
     <h1>Edit Schedule</h1>
+<hr>
     <a href="{% url 'scheduleapp:list' %}">Back to List</a>
     <form method="post">
         {% csrf_token %}
         {{ form.media }}
         {{ form.as_p }}
-        <button type="submit">Update</button>
+        <button type="submit" id="updateButton">Update</button>
     </form>
-
-    <hr>
+<hr>
 {% endblock %}
