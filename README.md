@@ -47,6 +47,8 @@ Cada usuário pode se registrar, fazer login/logout, criar schedules e incluir *
     cd DjangoSchedule
 5. **Execute as migrações:**
     ```bash
+    python manage.py makemigrations
+    python manage.py makemigrations scheduleapp
     python manage.py migrate
 6. **Inicie o server local do django:**
     ```bash
