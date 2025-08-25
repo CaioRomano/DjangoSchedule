@@ -1,4 +1,4 @@
-# 🗓️ Django Schedules App
+# Django Schedules App
 
 Um site desenvolvido com **Django** que permite aos usuários criarem suas próprias agendas (**schedules**) de forma privada e segura.  
 Cada usuário pode se registrar, fazer login/logout, criar schedules e incluir **imagens e conteúdo formatado** diretamente nos schedules utilizando uma extensão chamada **TinyMCE** que se integra ao Django.  
@@ -7,7 +7,7 @@ Cada usuário pode se registrar, fazer login/logout, criar schedules e incluir *
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 - Registro de novos usuários
 - Login e Logout
