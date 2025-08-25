@@ -9,6 +9,6 @@
 <form class="form-with-validation" action="/users/register/" method="post">
     {{ form }}
     {% csrf_token %}
-    <button class="form-submit">Submit</button>
+    <button class="form-submit" id="submitButton">Submit</button>
 </form>
 {% endblock %}

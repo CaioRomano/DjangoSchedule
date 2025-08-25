@@ -1,27 +1,45 @@
+/* Estilos globais */
 body {
-    /* Adiciona 20px de espaçamento em todos os lados */
-    padding: 20px;
     font-family: Arial, sans-serif;
-    color: #333;
+    margin: 0;
     background-color: #f4f4f4;
+    color: #333;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container > div > div {
+
 }
 
 h1, h2, h4 {
     color: #0056b3;
     margin-bottom: 10px;
-}
-p {
-    margin-bottom: 15px;
+    padding-right: 150px;
+    padding-left: 150px;
 }
 a {
     color: #007BFF;
     text-decoration: none;
 }
-
 a:hover {
     text-decoration: underline;
 }
-
+button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding-right: 150px;
+    padding-left: 150px;
+    border-radius: 4px;
+    cursor: pointer;
+}
 button:hover {
     background-color: #c82333;
 }
@@ -29,20 +47,29 @@ form {
     display: inline-block;
 }
 
+div {
+    padding-right: 150px;
+    padding-left: 150px;
+}
+
 /* Estilo para a barra de navegação */
 nav {
-    background-color: #003366;
-    padding: 50px 30px;
+    background-color: #003366; /* NOVO: Fundo azul escuro */
+    padding: 10px 20px;
     margin-bottom: 20px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
+
+nav {
+    padding-left: 150px;
+    padding-right: 150px;
+}
 nav a {
-    color: #FFFFFF;
+    color: #FFFFFF; /* NOVO: Cor dos links para branco */
     font-weight: bold;
     margin-right: 30px;
-    padding: 20px 10px;
 }
 nav a:last-child {
     margin-right: 0;
@@ -68,6 +95,11 @@ nav a:hover {
     color: #003366; /* NOVO: Texto azul escuro no hover */
 }
 
+/* Regra para alinhar o formulário à direita */
+.align-right {
+    margin-left: auto;
+}
+
 button {
     color: white;
     padding: 10px 15px;
@@ -82,17 +114,22 @@ button {
 /* 3. Estilos específicos para cada botão por ID */
 #saveButton {
     background-color: #28a745; /* Cor verde */
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 #removeButton {
-    background-color: #dc3545; /* Cor vermelha */
+    background-color: #dc3545;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
-#updateButton {
-    background-color: #007BFF; /* Cor azul */
+#updateButton, #backToButton, #submitButton {
+    background-color: #007BFF;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
-/* 4. Estilo de hover para os botões */
 #saveButton:hover {
     background-color: #218838;
 }
@@ -101,6 +138,12 @@ button {
     background-color: #c82333;
 }
 
-#updateButton:hover {
+#updateButton:hover, #backToButton:hover, #submitButton {
     background-color: #0056b3;
+}
+
+#schedule-content div {
+    margin-bottom: 150px;
+    margin-top: 150px;
+    text-align: left;
 }

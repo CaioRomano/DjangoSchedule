@@ -5,10 +5,15 @@
 
 {% block content %}
     <h1>Create Schedule</h1>
-    <a href="{% url 'scheduleapp:list' %}">Back to List</a>
+<hr>
+    <form method="post" action="{% url 'scheduleapp:list' %}">
+        {% csrf_token %}
+        <button type="submit" id="backToButton">Back to List</button>
+    </form>
     <form method="post">
         {% csrf_token %}
         {{ form.media }} {{ form.as_p }}
         <button type="submit" id="saveButton">Save</button>
     </form>
+<hr>
 {% endblock %}
