@@ -42,13 +42,16 @@ Cada usuário pode se registrar, fazer login/logout, criar schedules e incluir *
 3. **Instale as dependências:**
     ```bash
     pip install -r requirements.txt
-4. **Execute as migrações:**
+4. ** Mude o diretório:##
+    ```bash
+    cd DjangoSchedule
+5. **Execute as migrações:**
     ```bash
     python manage.py migrate
-5. **Inicie o server local do django:**
+6. **Inicie o server local do django:**
     ```bash
     python manage.py runserver
-6. **Acesse em:**
+7. **Acesse em:**
     ```bash
     http://localhost:8000
 
