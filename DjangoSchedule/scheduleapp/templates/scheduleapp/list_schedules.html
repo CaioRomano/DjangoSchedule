@@ -20,5 +20,9 @@
                     </button>
                 </form>
         </div>
+    {% empty %}
+        {% if user.is_authenticated %}
+            <p id="create-schedule">No schedules yet. <a href="{% url 'scheduleapp:create' %}">Create your first Schedule!</a></p>
+        {% endif %}
     {% endfor %}
 {% endblock %}
