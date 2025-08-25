@@ -32,8 +32,8 @@ Cada usuário pode se registrar, fazer login/logout, criar schedules e incluir *
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   cd seu-repositorio
+   git clone https://github.com/seu-usuario/DjangoSchedule.git
+   cd DjangoSchedule
 2. **Crie e ative um ambiente virtual:**
     ```bash
     python -m venv venv
