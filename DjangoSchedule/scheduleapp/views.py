@@ -7,11 +7,9 @@ from .forms import ScheduleForm
 
 def list_schedules(request):
     if request.user.is_authenticated:
-        # Filtra as anotações para mostrar apenas as do usuário logado
         schedules = Schedule.objects.filter(author=request.user).order_by('-created_at')
         return render(request, 'scheduleapp/list_schedules.html', {'schedules': schedules})
     else:
-        # Se o usuário não estiver logado, não há anotações para mostrar
         return render(request, 'scheduleapp/list_schedules.html', {'schedules': []})
 
 
