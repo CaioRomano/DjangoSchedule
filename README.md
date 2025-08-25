@@ -42,18 +42,16 @@ Cada usuário pode se registrar, fazer login/logout, criar schedules e incluir *
 3. **Instale as dependências:**
     ```bash
     pip install -r requirements.txt
-4. ** Mude o diretório:##
-    ```bash
     cd DjangoSchedule
-5. **Execute as migrações:**
+4. **Execute as migrações:**
     ```bash
     python manage.py makemigrations
     python manage.py makemigrations scheduleapp
     python manage.py migrate
-6. **Inicie o server local do django:**
+5. **Inicie o server local do django:**
     ```bash
     python manage.py runserver
-7. **Acesse em:**
+6. **Acesse em:**
     ```bash
     http://localhost:8000
 
@@ -67,6 +65,8 @@ Graças ao TinyMCE, é possível:
  - Inserir links e imagens diretamente no conteúdo
 
  - Melhorar a experiência do usuário ao criar schedules
+
+**OBS**: As imagens dentro de uma schedule não podem exceder 1,5 MB no total. Você pode inserir quantas imagens quiser, desde que a soma do tamanho de todas não ultrapasse esse limite.
 
 ## 🛠 Tecnologias Utilizadas
  - Python
